@@ -1,0 +1,41 @@
+.example-card {
+    max-width: 253px;
+    max-height: 380px;
+}
+
+ .img-user{
+    max-width: 320px;
+    max-height: 200px;
+    padding-left: 2px;
+    padding-left: 2px;
+}
+  
+.example-header-image {
+    background-size: cover;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+* {box-sizing: border-box;}
+
+.wrapper > div {
+    padding: 1em;
+}
+
+.table{
+  width: 100%;
+}
+
+.example-container {
+  height: 400px;
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+}
+
+
+  
