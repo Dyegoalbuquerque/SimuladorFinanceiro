@@ -76,15 +76,18 @@ namespace Webapi.Domain.Services.Concrete
             var parcelas = new List<Parcela>();
 
             item.ValorTotal = Math.Round(item.ValorTotal, 2);
+            item.Juros = Math.Round(item.Juros, 4);
 
             decimal valorParcela = CalculoJuros.CalcularParcela(item.ValorTotal, item.Juros, item.QuantidadeParcelas);
+            
+            valorParcela = Math.Round(valorParcela, 2);
 
             for(int i = 0; i < item.QuantidadeParcelas; i++)
             {
                 var parcela = new Parcela() 
                 { 
-                    Juros = Math.Round(item.Juros, 4), 
-                    Valor = Math.Round(valorParcela, 2), 
+                    Juros = item.Juros, 
+                    Valor = valorParcela, 
                     Vencimento = item.Data.AddMonths(i + 1)
                 };
 

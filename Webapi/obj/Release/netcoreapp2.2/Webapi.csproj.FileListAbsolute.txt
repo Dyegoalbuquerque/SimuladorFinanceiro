@@ -1,0 +1,14 @@
+/Users/dyegovasconcelosdealbuquerque/Desktop/Fortes/Webapi/bin/Release/netcoreapp2.2/Webapi.deps.json
+/Users/dyegovasconcelosdealbuquerque/Desktop/Fortes/Webapi/bin/Release/netcoreapp2.2/Webapi.runtimeconfig.json
+/Users/dyegovasconcelosdealbuquerque/Desktop/Fortes/Webapi/bin/Release/netcoreapp2.2/Webapi.runtimeconfig.dev.json
+/Users/dyegovasconcelosdealbuquerque/Desktop/Fortes/Webapi/bin/Release/netcoreapp2.2/Webapi.dll
+/Users/dyegovasconcelosdealbuquerque/Desktop/Fortes/Webapi/bin/Release/netcoreapp2.2/Webapi.pdb
+/Users/dyegovasconcelosdealbuquerque/Desktop/Fortes/Webapi/obj/Release/netcoreapp2.2/Webapi.csprojAssemblyReference.cache
+/Users/dyegovasconcelosdealbuquerque/Desktop/Fortes/Webapi/obj/Release/netcoreapp2.2/Webapi.csproj.CoreCompileInputs.cache
+/Users/dyegovasconcelosdealbuquerque/Desktop/Fortes/Webapi/obj/Release/netcoreapp2.2/Webapi.RazorAssemblyInfo.cache
+/Users/dyegovasconcelosdealbuquerque/Desktop/Fortes/Webapi/obj/Release/netcoreapp2.2/Webapi.RazorAssemblyInfo.cs
+/Users/dyegovasconcelosdealbuquerque/Desktop/Fortes/Webapi/obj/Release/netcoreapp2.2/Webapi.AssemblyInfoInputs.cache
+/Users/dyegovasconcelosdealbuquerque/Desktop/Fortes/Webapi/obj/Release/netcoreapp2.2/Webapi.AssemblyInfo.cs
+/Users/dyegovasconcelosdealbuquerque/Desktop/Fortes/Webapi/obj/Release/netcoreapp2.2/Webapi.RazorTargetAssemblyInfo.cache
+/Users/dyegovasconcelosdealbuquerque/Desktop/Fortes/Webapi/obj/Release/netcoreapp2.2/Webapi.dll
+/Users/dyegovasconcelosdealbuquerque/Desktop/Fortes/Webapi/obj/Release/netcoreapp2.2/Webapi.pdb

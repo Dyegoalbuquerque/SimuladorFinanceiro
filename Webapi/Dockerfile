@@ -1,9 +1,17 @@
-FROM mcr.microsoft.com/dotnet/core/aspnet:2.2 AS runtime
 
-LABEL version="1.0" maintainer="Dyego Albuquerque"
+FROM microsoft/dotnet:2.2-sdk AS build-env
+WORKDIR /app
 
-WORKDIR  /app
+# Copy csproj and restore as distinct layers
+COPY *.csproj ./
+RUN dotnet restore
 
-COPY  ./dist .
+# Copy everything else and build
+COPY . ./
+RUN dotnet publish -c Release -o out
 
-ENTRYPOINT  ["dotnet", "Webapi.dll"]
+# Build runtime image
+FROM microsoft/dotnet:2.2-aspnetcore-runtime
+WORKDIR /app
+COPY --from=build-env /app/out .
+CMD dotnet Webapi.dll
