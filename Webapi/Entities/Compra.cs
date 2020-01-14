@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Webapi.Entities
 {
@@ -11,5 +12,14 @@ namespace Webapi.Entities
         public int QuantidadeParcelas {get; set; }
         public List<Parcela> Parcelas { get; set; }
         
+        public decimal CalcularMontante()
+        {
+            if(this.Parcelas != null && this.Parcelas.Any())
+            {
+                var valor = this.Parcelas.Sum(p => p.Valor);
+                return Math.Round(valor, 2);
+            }
+            return 0;
+        }
     }
 }

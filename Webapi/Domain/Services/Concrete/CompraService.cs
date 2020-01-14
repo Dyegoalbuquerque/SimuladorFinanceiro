@@ -13,12 +13,9 @@ namespace Webapi.Domain.Services.Concrete
     public class CompraService : ICompraService
     {
         private ICompraRepository Repository { get; set;}
-
-        private IParcelaRepository ParcelaRepository {get; set;}
-        public CompraService(ICompraRepository repository, IParcelaRepository parcelaRepository)
+        public CompraService(ICompraRepository repository)
         {
             this.Repository = repository;
-            this.ParcelaRepository = parcelaRepository;
         }
 
         public async Task Adicionar(Compra item)
@@ -31,26 +28,11 @@ namespace Webapi.Domain.Services.Concrete
             if (item.Id != 0)
             {
                 throw new CompraException("Id do objeto deve ser zero");
-            }
+            }         
 
-           
+            item = Simular(item);
 
-            var parcelas = new List<Parcela>();
-
-            for(int i=0; i < item.QuantidadeParcelas; i++)
-            {
-                var parcela = new Parcela() 
-                { 
-                    Juros = item.Juros, 
-                    Valor = 4, 
-                    Vencimento = DateTime.Now
-                };
-
-                parcelas.Add(parcela);
-            }
-
-            item.Parcelas = parcelas;
-            await this.Repository.Adicionar(item);
+            this.Repository.Adicionar(item);
 
             await this.SalvarMudancas();
         }
@@ -82,6 +64,36 @@ namespace Webapi.Domain.Services.Concrete
         public async Task SalvarMudancas()
         {
             await this.Repository.SalvarMudancas();
+        }
+    
+        public Compra Simular(Compra item)
+        {
+            if (item == null)
+            {
+                throw new ArgumentNullException("Argumento item não pode ser nulo");
+            }
+
+            var parcelas = new List<Parcela>();
+
+            item.ValorTotal = Math.Round(item.ValorTotal, 2);
+
+            decimal valorParcela = CalculoJuros.CalcularParcela(item.ValorTotal, item.Juros, item.QuantidadeParcelas);
+
+            for(int i = 0; i < item.QuantidadeParcelas; i++)
+            {
+                var parcela = new Parcela() 
+                { 
+                    Juros = Math.Round(item.Juros, 4), 
+                    Valor = Math.Round(valorParcela, 2), 
+                    Vencimento = item.Data.AddMonths(i + 1)
+                };
+
+                parcelas.Add(parcela);
+            }
+
+            item.Parcelas = parcelas;
+
+            return item;
         }
     }
 }

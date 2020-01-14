@@ -73,11 +73,28 @@ namespace Webapi.Controllers
             }catch(CompraException e)
             {
                 return BadRequest(e.Message);
-            }catch(Exception)
+            } 
+        }
+
+            // POST api/compra
+        [HttpPost("simular")]
+        public IActionResult Simular([FromBody] Compra item)
+        {
+            if(item == null){
+                return BadRequest();
+            }
+
+            try{
+
+                item = this.CompraService.Simular(item);
+            
+                return Ok(item);
+            }catch(Exception e)
             {
                 return StatusCode((int)HttpStatusCode.InternalServerError, MensagemErroServidor);
             } 
         }
+
 
         // DELETE api/compra/5
         [HttpDelete("{id}")]

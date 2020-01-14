@@ -13,5 +13,7 @@ namespace Webapi.Domain.Services.Abstract
         Task Remover(int id);
 
         Task SalvarMudancas();
+
+        Compra Simular(Compra item);
     }
 }

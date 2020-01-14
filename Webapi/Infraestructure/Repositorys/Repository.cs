@@ -27,9 +27,9 @@ namespace Webapi.Infraestructure.Repositorys
                                         .FirstOrDefaultAsync(e => e.Id == id);
         }
 
-        public virtual async Task Adicionar(T entity)
+        public virtual void Adicionar(T entity)
         {
-            await this.DbContext.Set<T>().AddAsync(entity);
+             this.DbContext.Set<T>().Add(entity);
         }
  
         public virtual void Atualizar(int id, T entity)

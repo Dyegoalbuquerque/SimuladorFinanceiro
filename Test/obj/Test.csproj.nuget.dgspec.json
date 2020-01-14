@@ -1,0 +1,163 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/dyegovasconcelosdealbuquerque/Desktop/Fortes/Test/Test.csproj": {}
+  },
+  "projects": {
+    "/Users/dyegovasconcelosdealbuquerque/Desktop/Fortes/Test/Test.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/dyegovasconcelosdealbuquerque/Desktop/Fortes/Test/Test.csproj",
+        "projectName": "Test",
+        "projectPath": "/Users/dyegovasconcelosdealbuquerque/Desktop/Fortes/Test/Test.csproj",
+        "packagesPath": "/Users/dyegovasconcelosdealbuquerque/.nuget/packages/",
+        "outputPath": "/Users/dyegovasconcelosdealbuquerque/Desktop/Fortes/Test/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/dyegovasconcelosdealbuquerque/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "/Users/dyegovasconcelosdealbuquerque/Desktop/Fortes/Webapi/Webapi.csproj": {
+                "projectPath": "/Users/dyegovasconcelosdealbuquerque/Desktop/Fortes/Webapi/Webapi.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[15.8.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[3.10.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
+            "SpecFlow.Tools.MsBuild.Generation": {
+              "target": "Package",
+              "version": "[3.0.220, )"
+            },
+            "nunit": {
+              "target": "Package",
+              "version": "[3.12.0, )"
+            },
+            "specflow.nunit": {
+              "target": "Package",
+              "version": "[3.0.220, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "/Users/dyegovasconcelosdealbuquerque/Desktop/Fortes/Webapi/Webapi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/dyegovasconcelosdealbuquerque/Desktop/Fortes/Webapi/Webapi.csproj",
+        "projectName": "Webapi",
+        "projectPath": "/Users/dyegovasconcelosdealbuquerque/Desktop/Fortes/Webapi/Webapi.csproj",
+        "packagesPath": "/Users/dyegovasconcelosdealbuquerque/.nuget/packages/",
+        "outputPath": "/Users/dyegovasconcelosdealbuquerque/Desktop/Fortes/Webapi/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/dyegovasconcelosdealbuquerque/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

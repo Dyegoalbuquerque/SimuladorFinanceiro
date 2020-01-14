@@ -29,9 +29,7 @@ namespace Webapi
         {
             services.AddMvc();
 
-            string connectionString = Configuration.GetConnectionString("DefaultConnection");
-            
-            services.AddDbContext<SimuladorContext>(opt => opt.UseSqlServer(connectionString));
+            services.AddDbContext<SimuladorContext>();
             
             services.AddTransient<ICompraRepository, CompraRepository>();
             services.AddTransient<IParcelaRepository, ParcelaRepository>();

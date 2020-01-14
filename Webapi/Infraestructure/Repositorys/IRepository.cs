@@ -10,7 +10,7 @@ namespace Webapi.Infraestructure.Repositorys
  
     Task<TEntity> BuscarPorId(int id);
  
-    Task Adicionar(TEntity entity);
+    void Adicionar(TEntity entity);
  
     void Atualizar(int id, TEntity entity);
  
