@@ -73,6 +73,9 @@ namespace Webapi.Controllers
             }catch(CompraException e)
             {
                 return BadRequest(e.Message);
+            }catch(Exception e)
+            {
+                return StatusCode((int)HttpStatusCode.InternalServerError, MensagemErroServidor);
             } 
         }
 

@@ -1,17 +1,18 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Parcelas } from '../components/detail/parcelas';
+import { Parcela } from '../models/parcela';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ParcelaService {
 
-  ApiUrl='https://stormy-hollows-04970.herokuapp.com/api/users';    
+  ApiUrl='https://fortes-tecnologia.herokuapp.com/api/parcela';    
   constructor(private httpclient: HttpClient) { }    
-    
-  ObterPorId(login : string):Observable<Parcelas>{    
-    return this.httpclient.get<Parcelas>(this.ApiUrl + '/' + login + '/repos');    
-  }      
+
+  
+  ObterParcelas():Observable<Parcela[]>{    
+    return this.httpclient.get<Parcela[]>(this.ApiUrl);    
+  }
 }

@@ -2,14 +2,13 @@
 
 Este projeto foi configurado com as tecnologias .net core version 2.2 onde expõe endpoints como integração na parte do back-end.
 
-## Tecnologias utilizadas
-
-Aqui as tecnologias utilizadas
+## Tecnologias e padrões utilizados
 
 - ASP.NET Core 2.2
 - Entity Framework Core 2.2.
 - SQL Server para database.
 - Visual Studio Code.
+- DDD
 
 ## Build
 

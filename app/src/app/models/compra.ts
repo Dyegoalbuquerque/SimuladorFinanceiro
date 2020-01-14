@@ -9,4 +9,16 @@ export class Compra{
     parcelas: Parcela[];
 
     constructor(){}
+
+    static CalcularMontante(parcelas: Parcela[]): number {
+        let soma = 0;
+
+        if(parcelas == undefined){
+            return 0;
+        }
+        parcelas.forEach(p => {
+            soma += p.valor;
+        });
+        return soma;
+    }
 }

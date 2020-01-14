@@ -61,6 +61,7 @@ export class ListComponent  implements OnInit {
           var item = data.parcelas[i];
           item.juros *= 100;
         }
+
         this.OpenDialog(data);
       });
     }  
@@ -99,12 +100,19 @@ export class DialogOverviewExampleDialog implements OnInit {
     this.dataSource = new MatTableDataSource<Parcela>(this.compra.parcelas);
   }
 
+  CalcularMontante(): number{
+    return Compra.CalcularMontante(this.compra.parcelas);
+  }
+
   SalvarSimulacao(): void{
     this.compraService.Salvar(this.compra).subscribe(data=>{
        this.compra = data;
        this.MostrarMensagem("Salvo com sucesso !", "Compra");
        this.Fechar();
-     });  
+     },
+     err => { 
+       this.MostrarMensagem("Ocorreu um probelam !", "Compra");
+    });  
   }
 
   Fechar(): void {

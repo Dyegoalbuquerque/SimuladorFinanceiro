@@ -9,7 +9,7 @@ import { Compra } from '../models/compra';
 })
 export class CompraService {
 
-  ApiUrl='http://localhost:5002/api/compra';    
+  ApiUrl='https://fortes-tecnologia.herokuapp.com/api/compra';    
   constructor(private httpclient: HttpClient) { }    
     
   ObterCompras():Observable<Compra[]>{    

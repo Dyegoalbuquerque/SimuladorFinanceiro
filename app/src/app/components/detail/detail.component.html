@@ -6,7 +6,7 @@
       <mat-card-header>
         <div mat-card-avatar class="example-header-image"></div>
         <mat-card-title>{{compra.valorTotal | currency:'R$':true:'1.2-2'}}</mat-card-title>
-        <mat-card-subtitle> {{compra.juros}}%</mat-card-subtitle>
+        <mat-card-subtitle> {{compra.juros | number : '1.2-2'}}%</mat-card-subtitle>
       </mat-card-header>
       <img mat-card-image src="https://www.konkero.com.br/revistawp/wp-content/uploads/2016/08/Fluxo-de-caixa1-e1491591577705.jpg" class="img-user" alt="Photo of a Shiba Inu">
       <mat-card-content>
@@ -36,7 +36,7 @@
       <!-- Name Column -->
       <ng-container matColumnDef="juros">
         <th mat-header-cell *matHeaderCellDef> Juros </th>
-        <td mat-cell *matCellDef="let element"> {{element.juros}}% </td>
+        <td mat-cell *matCellDef="let element"> {{element.juros | number : '1.2-2'}}% </td>
       </ng-container>
     
       <!-- Weight Column -->

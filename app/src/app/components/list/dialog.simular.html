@@ -3,8 +3,9 @@
  
   <label>Total da compra <b>{{ compra.valorTotal | currency:'R$':true:'1.2-2'}}</b></label><br/>
   <label>Data  <b>{{compra.data | date: 'dd/MM/yyyy'}}</b></label><br/>
-  <label>Juros <b>{{compra.juros}}%</b></label><br/>
-  <label>Parcelamento <b>{{compra.quantidadeParcelas}}x</b></label>
+  <label>Juros <b>{{compra.juros | number : '1.2-2'}}%</b></label><br/>
+  <label>Parcelamento <b>{{compra.quantidadeParcelas}}x</b></label>  <br/>
+  <label>Montante <b>{{CalcularMontante() | currency:'R$':true:'1.2-2'}}</b></label>
 
   <div>
     <h3>Parcelas</h3>
@@ -28,7 +29,7 @@
           <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
         </th>
         <td mat-cell *matCellDef="let element"> 
-          {{element.juros}}%
+          {{element.juros | number : '1.2-2'}}%
           <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
         </td>
       </ng-container>
